@@ -1,0 +1,66 @@
+<div class="row ">
+  <div class="col-md-1">&nbsp;</div>
+  <div class="col-md-10 text-center">
+    <h3>Make you drink now!</h3>
+    <br />
+    <div class="col-md-1">&nbsp;</div>
+    <div class="col-md-2">
+      <div class="panel panel-info inputShadow">
+        <div class="panel-heading">Chose your option</div>
+        <div class="panel-body">
+          <input type="radio" id="sodaOption" name="Coke" value="true" ng-value="true" ng-model="coke" ng-change="ingredients[0].show = !ingredients[0].show; ingredients[1].show = !ingredients[1].show" /> Coke
+          <input type="radio" id="sodaOption" name="Pepsi" value="false" ng-value="false" ng-model="coke" ng-change="ingredients[1].show = !ingredients[1].show; ingredients[0].show = !ingredients[0].show" /> Pepsi
+        </div>
+      </div>
+      <div class="panel panel-info inputShadow">
+        <div class="panel-heading">Developed by</div>
+        <div class="panel-body">
+          <p class="text-left">
+            <span ng-repeat="developer in developers">{{developer.name}}<span ng-if="!$last">,</span><span ng-if="$last"> - ADSMA6</span></span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2" layout-align="center center" ng-repeat="ingredient in ingredients" ng-show="ingredient.show">
+      <div class="container">
+        <div class="panel panel-primary inputShadow">
+          <div class="panel-heading">{{ingredient.name}}</div>
+          <div class="panel-body">
+            <md-slider-container>
+              <md-input-container>
+                <input class="form-control inputRadius inputSize" type="number" ng-model="ingredient.quantity" min="0" max="1000" aria-label="master" aria-controls="master-slider">
+              </md-input-container>
+              <md-slider flex ng-model="ingredient.quantity" min="0" max="1000" md-discrete aria-label="Master" md-vertical step="1" class="md-primary">
+              </md-slider>
+            </md-slider-container>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="panel panel-info inputShadow">
+        <div class="panel-heading">Action Panel</div>
+        <div class="panel-body">
+          <p>
+            <button type="button" class="btn btn-primary btn-block btn-lg" ng-click="cleanQuantity()">Limpar</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-success btn-block btn-lg">Cálcular</button>
+          </p>
+          <p>
+            <div class="btn group dropup" style="padding:0;">
+              <button type="button" class="btn btn-warning btn-lg btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drinks Prontos
+              </button>
+              <ul class="dropdown-menu">
+                <li ng-repeat="value in standardDrinks"><a ng-click="doStandardDrink(value)">{{value.name}}</a>
+                </li>
+              </ul>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1">&nbsp;</div>
+  </div>
+  <div class="col-md-1">&nbsp;</div>
+</div>

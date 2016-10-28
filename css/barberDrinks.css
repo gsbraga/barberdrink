@@ -1,0 +1,27 @@
+.black {
+  background:#000000;
+}
+.header {
+  min-height: 100px;
+  background: url("/img/back-header.png") repeat-x;
+}
+.whiteLetter{
+  color: #ffffff;
+}
+.inputShadow {
+  -webkit-box-shadow: 4px -1px 12px -1px rgba(3,3,3,1);
+  -moz-box-shadow: 4px -1px 12px -1px rgba(3,3,3,1);
+  box-shadow: 4px -1px 12px -1px rgba(3,3,3,1);
+}
+.inputRadius {
+  -webkit-box-shadow: 10px 10px 39px -5px rgba(0,0,0,0.34);
+  -moz-box-shadow: 10px 10px 39px -5px rgba(0,0,0,0.34);
+  box-shadow: 10px 10px 39px -5px rgba(0,0,0,0.34);
+}
+.backgroundImage {
+  background: url('/img/background.jpg');
+  background-position: top;
+}
+.inputSize {
+  min-width: 55px !important;
+}

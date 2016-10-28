@@ -1,0 +1,18 @@
+{
+"ingredients":  [
+  {"name": "Coke", "sourceImage": "/img/coke.png", "quantity":0, "show": true},
+  {"name": "Pepsi", "sourceImage": "/img/coke.png", "quantity":0, "show": false},
+  {"name": "Rum", "sourceImage": "/img/coke.png", "quantity":0, "show": true},
+  {"name": "Ice", "sourceImage": "/img/coke.png", "quantity":0, "show": true}
+  ],
+"standardDrinks": [
+  {"name": "Leleco Leco", "coke": 4, "pepsi": 10, "rum": 4, "ice": 12},
+  {"name": "Wonderyls", "coke": 8, "pepsi": 7, "rum": 6, "ice": 12},
+  {"name": "Fornicats", "coke": 7, "pepsi": 6, "rum": 4, "ice": 7}
+  ],
+"developers": [
+  {"name": "Lucas Gnazzo"},
+  {"name": "Victor Ferreira"},
+  {"name": "Vinicius Simões"}
+  ]
+}
