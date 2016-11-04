@@ -1,4 +1,4 @@
-<div class="row ">
+<div class="row" ng-show="!calculated">
   <div class="col-md-1">&nbsp;</div>
   <div class="col-md-10 text-center">
     <h3>Make you drink now!</h3>
@@ -42,20 +42,13 @@
         <div class="panel-heading">Action Panel</div>
         <div class="panel-body">
           <p>
-            <button type="button" class="btn btn-primary btn-block btn-lg" ng-click="cleanQuantity()">Limpar</button>
+            <button type="button" class="btn btn-primary btn-block btn-lg" ng-click="clearQuantity()">Limpar</button>
           </p>
           <p>
-            <button type="button" class="btn btn-success btn-block btn-lg">Cálcular</button>
+            <button type="button" class="btn btn-success btn-block btn-lg" ng-click="ingrdientsDegree()">Cálcular</button>
           </p>
           <p>
-            <div class="btn group dropup" style="padding:0;">
-              <button type="button" class="btn btn-warning btn-lg btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drinks Prontos
-              </button>
-              <ul class="dropdown-menu">
-                <li ng-repeat="value in standardDrinks"><a ng-click="doStandardDrink(value)">{{value.name}}</a>
-                </li>
-              </ul>
-            </div>
+            <button type="button" class="btn btn-warning btn-block btn-lg" ng-click="helpMe()">Help me!</button>
           </p>
         </div>
       </div>
@@ -64,3 +57,4 @@
   </div>
   <div class="col-md-1">&nbsp;</div>
 </div>
+<div ng-show="calculated" ng-include src="'/views/results.html'"></div>

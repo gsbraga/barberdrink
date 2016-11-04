@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-2">&nbsp;</div>
+  <div class="col-md-8 text-center">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        Resultados
+      </div>
+      <div class="panel-body">
+        <ul class="list-group" ng-repeat="(key, ingredient) in ingredients">
+          <li class="list-group-item" ng-show="ingredient.show">
+
+                {{ingredient.name}}
+
+
+              {{ingredient.quantity}}
+
+
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+</div>
+<div class="row">
+  <button class="button" ng-click="return()">Return</button>
+</div>

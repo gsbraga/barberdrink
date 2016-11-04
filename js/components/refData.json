@@ -2,7 +2,7 @@
 "ingredients":  [
   {"name": "Coke", "sourceImage": "/img/coke.png", "quantity":0, "show": true},
   {"name": "Pepsi", "sourceImage": "/img/coke.png", "quantity":0, "show": false},
-  {"name": "Rum", "sourceImage": "/img/coke.png", "quantity":0, "show": true},
+  {"name": "Run", "sourceImage": "/img/coke.png", "quantity":0, "show": true},
   {"name": "Ice", "sourceImage": "/img/coke.png", "quantity":0, "show": true}
   ],
 "standardDrinks": [
