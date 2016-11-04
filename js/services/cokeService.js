@@ -13,13 +13,13 @@
       var x = coke.quantity;
       var pertinenceDegree = 0;
       if (x > 58 && x <= 60) pertinenceDegree = 1;
-      if (x >= 56 && x <= 58) pertinenceDegree = (60 - x) / (60 - 58);
+      if (x >= 56 && x <= 58) pertinenceDegree = (x - 56) / (58 - 56);
       coke.weakPertinenceDegree = pertinenceDegree;
     }
     vm.softDegree = function(coke) {
       var x = coke.quantity;
       var pertinenceDegree = 0;
-      if (x >= 52 && x <= 54) pertinenceDegree = (54 - x) / (54 - 52);
+      if (x >= 52 && x <= 54) pertinenceDegree = (x - 52) / (54 - 52);
       if (x > 54 && x < 56) pertinenceDegree = 1;
       if (x >= 56 && x <= 58) pertinenceDegree = (58 - x) / (58 - 56);
       coke.softPertinenceDegree = pertinenceDegree;

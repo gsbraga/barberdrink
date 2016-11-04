@@ -1,3 +1,4 @@
+<br  /><br />
 <div class="row">
   <div class="col-md-2">&nbsp;</div>
   <div class="col-md-8 text-center">
@@ -6,21 +7,46 @@
         Resultados
       </div>
       <div class="panel-body">
-        <ul class="list-group" ng-repeat="(key, ingredient) in ingredients">
-          <li class="list-group-item" ng-show="ingredient.show">
+          <div class="col-md-3" ng-repeat="(key, ingredient) in ingredients" ng-if="ingredient.show">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+            {{ingredient.name}}
+          </div>
+          <div class="panel-body" ng-if="key !== 3">
+            <h4>Quantidade: {{ingredient.quantity}}</h4>
+            <ul class="list-group">
+              <li class="list-group-item">
+                  Fraco: {{ingredient.weakPertinenceDegree}}
+              </li>
+              <li class="list-group-item">
+                  Suave: {{ingredient.softPertinenceDegree}}
+              </li>
+              <li class="list-group-item">
+                  Forte: {{ingredient.strongPertinenceDegree}}
+              </li>
+            </ul>
+          </div>
+          <div class="panel-body" ng-if="key === 3">
+            <h4>Quantidade: {{ingredient.quantity}}</h4>
+            <ul class="list-group">
+              <li class="list-group-item">
+                  Pertinência: {{ingredient.pertinenceDegree}}
+              </li>
+            </ul>
 
-                {{ingredient.name}}
+          </div>
+
+        </div>
+        </div>
+
+        <div class="col-md-2">
 
 
-              {{ingredient.quantity}}
-
-
-          </li>
-        </ul>
+          <button type="button"  class="btn btn-primary btn-block btn-lg" ng-click="return()">Return</button>
+        </div>
       </div>
+
     </div>
 </div>
-</div>
-<div class="row">
-  <button class="button" ng-click="return()">Return</button>
+
 </div>
