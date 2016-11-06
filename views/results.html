@@ -7,32 +7,32 @@
         Resultados
       </div>
       <div class="panel-body">
-          <div class="col-md-3" ng-repeat="(key, ingredient) in ingredients" ng-if="ingredient.show">
+          <div class="col-md-3 colResult" ng-repeat="(key, ingredient) in ingredients" ng-if="ingredient.show">
             <div class="panel panel-default">
               <div class="panel-heading">
             {{ingredient.name}}
           </div>
-          <div class="panel-body" ng-if="key !== 3">
+          <div class="panel-body results" ng-if="key !== 3">
             <h4>Quantidade: {{ingredient.quantity}}</h4>
             <div class="list-group">
-              <a class="list-group-item">
+              <a class="list-group-item list">
                 <i class="fa fa-arrow-down fa-fw" aria-hidden="true"></i>
                   Fraco: {{ingredient.weakPertinenceDegree}}
               </a>
-              <a class="list-group-item">
+              <a class="list-group-item list">
                 <i class="fa fa-minus fa-fw" aria-hidden="true"></i>
                   Suave: {{ingredient.softPertinenceDegree}}
               </a>
-              <a class="list-group-item">
+              <a class="list-group-item list">
                 <i class="fa fa-arrow-up fa-fw" aria-hidden="true"></i>
                   Forte: {{ingredient.strongPertinenceDegree}}
               </a>
             </div>
           </div>
-          <div class="panel-body" ng-if="key === 3">
+          <div class="panel-body results" ng-if="key === 3">
             <h4>Quantidade: {{ingredient.quantity}}</h4>
             <div class="list-group">
-              <a class="list-group-item">
+              <a class="list-group-item list">
                 <i class="fa fa-minus fa-fw" aria-hidden="true"></i>
                   Pertinência: {{ingredient.pertinenceDegree}}
               </a>
@@ -47,7 +47,7 @@
 
 
 
-        <div class="col-md-2">
+        <div class="col-md-2 colResult">
 
 
           <div class="panel panel-success">
@@ -55,14 +55,14 @@
             Drink
           </div>
           <div class="panel-body" >
-            <ul class="list-group">
-              <li class="list-group-item">Fraco: {{drink[0].pertinenceDegree}}</li>
-              <li class="list-group-item">Suave: {{drink[1].pertinenceDegree}}</li>
-              <li class="list-group-item">Forte: {{drink[2].pertinenceDegree}}</li>
-            </ul>
+            <div class="list-group">
+              <a class="list-group-item list"><i class="fa fa-circle-o fa-fw" aria-hidden="true"></i>Fraco: {{drink[0].pertinenceDegree}}</a>
+              <a class="list-group-item list"><i class="fa fa-dot-circle-o fa-fw" aria-hidden="true"></i>Suave: {{drink[1].pertinenceDegree}}</a>
+              <a class="list-group-item list"><i class="fa fa-circle fa-fw" aria-hidden="true"></i>Forte: {{drink[2].pertinenceDegree}}</a>
+            </div>
           </div>
         </div>
-        <button type="button"  class="btn btn-primary btn-block btn-lg" ng-click="return()">Voltar</button>
+        <button type="button"  class="btn btn-primary btn-block btn-lg" ng-click="return()"><i class="fa fa-chevron-left fa-fw" aria-hidden="true"></i> Voltar</button>
       </div>
       </div>
 
@@ -70,3 +70,4 @@
 </div>
 
 </div>
+<br  /><br  /><br  /><br  /><br  />

@@ -12,6 +12,6 @@ app.config(function($routeProvider) {
     templateUrl: 'views/notfound.html'
   })
   .otherwise({
-    redirectTo: '/notfound'
+    redirectTo: '/'
   });
 });

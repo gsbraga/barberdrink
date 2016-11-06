@@ -2,6 +2,7 @@
   let app = angular.module("barberDrinks");
   app.controller("barberDrinksController", ["$scope", "drinkService", "$http","$location", function($scope, drinkService, $http, $location) {
     $scope.calculated = false;
+    $scope.coke = true;
     /* ### REFDATA ### */
     $http.get('/js/components/refData.json').success(function(data) {
       $scope.ingredients=data["ingredients"];
@@ -28,7 +29,7 @@
       return validated;
     }
     $scope.ingrdientsDegree = function() {
-      //if ($scope.validateCubaLibre())
+      if ($scope.validateCubaLibre()) {
         $scope.calculated = true;
         drinkService.ingrdientsDegree($scope.ingredients);
         drinkService.drinkDegree($scope.ingredients, $scope.drink);
@@ -38,11 +39,16 @@
           $scope.greaterIndex = 1;
         }
         if ($scope.drink[2].pertinenceDegree > $scope.drink[$scope.greaterIndex].pertinenceDegree) $scope.greaterIndex = 2;
+      } else {
+        $('#alertModal').modal('show');
+      }
     }
-    $scope.return = function() {
+    $scope.return = function(page) {
       $scope.calculated = false;
+      $location.path("/");
     }
     $scope.helpMe = function() {
+      $('#alertModal').modal('hide');
       $scope.clearQuantity();
       $location.path("/help");
     }

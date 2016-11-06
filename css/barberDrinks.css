@@ -5,6 +5,15 @@
   min-height: 100px;
   background: url("/img/back-header.png") repeat-x;
 }
+.footer {
+  text-align: center;
+  min-height: 50px;
+  color: #000000;
+}
+.footer a {
+
+  color: #ffffff;
+}
 .whiteLetter{
   color: #ffffff;
 }
@@ -19,9 +28,29 @@
   box-shadow: 10px 10px 39px -5px rgba(0,0,0,0.34);
 }
 .backgroundImage {
-  background: url('/img/background.jpg');
-  background-position: top;
+  background: url('/img/background.jpg') repeat-y;
+  background-color: black;
+
 }
 .inputSize {
   min-width: 55px !important;
+}
+.home {
+  min-height: 500px;
+}
+.actionPanel {
+  min-height: 262px;
+}
+.developers {
+  max-height: 85px;
+  padding: 5px;
+}
+.results {
+  padding: 5px;
+}
+.list {
+  padding: 10px 5px;
+}
+.colResult {
+      padding-right: 0px;
 }

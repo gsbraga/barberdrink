@@ -1,9 +1,9 @@
 {
 "ingredients":  [
-  {"name": "Coke", "sourceImage": "/img/coke.png", "quantity":0, "show": true},
-  {"name": "Pepsi", "sourceImage": "/img/coke.png", "quantity":0, "show": false},
-  {"name": "Run", "sourceImage": "/img/coke.png", "quantity":0, "show": true},
-  {"name": "Ice", "sourceImage": "/img/coke.png", "quantity":0, "show": true}
+  {"name": "Coca", "quantity":0, "show": true},
+  {"name": "Pepsi", "quantity":0, "show": false},
+  {"name": "Run", "quantity":0, "show": true},
+  {"name": "Gelo", "quantity":0, "show": true}
   ],
 "drink": [
   {"pertinenceName": "Fraco", "pertinenceDegree": 0, "price": "15,00"},

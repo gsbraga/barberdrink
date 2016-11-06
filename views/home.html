@@ -1,20 +1,20 @@
-<div class="row" ng-show="!calculated">
+<div class="row home" ng-show="!calculated">
   <div class="col-md-1">&nbsp;</div>
   <div class="col-md-10 text-center">
-    <h3>Escolha as quantidades!</h3>
+    <h3>Escolha as quantidades</h3>
     <br />
     <div class="col-md-1">&nbsp;</div>
     <div class="col-md-2">
       <div class="panel panel-info inputShadow">
-        <div class="panel-heading">Chose your option</div>
+        <div class="panel-heading"><i class="fa fa-check-square-o" aria-hidden="true"></i> Escolha a opção</div>
         <div class="panel-body">
           <input type="radio" id="sodaOption" name="Coke" value="true" ng-value="true" ng-model="coke" ng-change="ingredients[0].show = !ingredients[0].show; ingredients[1].show = !ingredients[1].show" /> Coke
           <input type="radio" id="sodaOption" name="Pepsi" value="false" ng-value="false" ng-model="coke" ng-change="ingredients[1].show = !ingredients[1].show; ingredients[0].show = !ingredients[0].show" /> Pepsi
         </div>
       </div>
-      <div class="panel panel-info inputShadow">
-        <div class="panel-heading">Desenvolvido por</div>
-        <div class="panel-body">
+      <div class="panel panel-info inputShadow ">
+        <div class="panel-heading"><i class="fa fa-code" aria-hidden="true"></i> Desenvolvedores</div>
+        <div class="panel-body developers">
           <p class="text-left">
             <span ng-repeat="developer in developers">{{developer.name}}<span ng-if="!$last">,</span><span ng-if="$last"> - ADSMA6</span></span>
           </p>
@@ -38,17 +38,18 @@
       </div>
     </div>
     <div class="col-md-2">
-      <div class="panel panel-info inputShadow">
-        <div class="panel-heading">Paneil de Ações</div>
+      <div class="panel panel-info inputShadow actionPanel">
+        <div class="panel-heading"><i class="fa fa-gear" aria-hidden="true"></i> Painel de Ações</div>
         <div class="panel-body">
+          <br />
           <p>
-            <button type="button" class="btn btn-primary btn-block btn-lg" ng-click="clearQuantity()">Limpar</button>
+            <button type="button" class="btn btn-primary btn-block btn-lg" ng-click="clearQuantity()"><i class="fa fa-paint-brush" aria-hidden="true"></i> Limpar</button>
           </p>
           <p>
-            <button type="button" class="btn btn-success btn-block btn-lg" ng-click="ingrdientsDegree()">Cálcular</button>
+            <button type="button" class="btn btn-success btn-block btn-lg" ng-click="ingrdientsDegree()"><i class="fa fa-calculator" aria-hidden="true"></i> Cálcular</button>
           </p>
           <p>
-            <button type="button" class="btn btn-warning btn-block btn-lg" ng-click="helpMe()">Ajuda</button>
+            <button type="button" class="btn btn-warning btn-block btn-lg" ng-click="helpMe()"><i class="fa fa-question-circle" aria-hidden="true"></i> Ajuda</button>
           </p>
         </div>
       </div>
