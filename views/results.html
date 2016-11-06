@@ -14,36 +14,56 @@
           </div>
           <div class="panel-body" ng-if="key !== 3">
             <h4>Quantidade: {{ingredient.quantity}}</h4>
-            <ul class="list-group">
-              <li class="list-group-item">
+            <div class="list-group">
+              <a class="list-group-item">
+                <i class="fa fa-arrow-down fa-fw" aria-hidden="true"></i>
                   Fraco: {{ingredient.weakPertinenceDegree}}
-              </li>
-              <li class="list-group-item">
+              </a>
+              <a class="list-group-item">
+                <i class="fa fa-minus fa-fw" aria-hidden="true"></i>
                   Suave: {{ingredient.softPertinenceDegree}}
-              </li>
-              <li class="list-group-item">
+              </a>
+              <a class="list-group-item">
+                <i class="fa fa-arrow-up fa-fw" aria-hidden="true"></i>
                   Forte: {{ingredient.strongPertinenceDegree}}
-              </li>
-            </ul>
+              </a>
+            </div>
           </div>
           <div class="panel-body" ng-if="key === 3">
             <h4>Quantidade: {{ingredient.quantity}}</h4>
-            <ul class="list-group">
-              <li class="list-group-item">
+            <div class="list-group">
+              <a class="list-group-item">
+                <i class="fa fa-minus fa-fw" aria-hidden="true"></i>
                   Pertinência: {{ingredient.pertinenceDegree}}
-              </li>
-            </ul>
-
+              </a>
+            </div>
           </div>
 
         </div>
+
+        <label><i class="fa fa-money fa-3x" ng-if="key === 3"></i></label>
+          <h4 ng-if="key === 3">Valor: R$ {{drink[greaterIndex].price}}</h4>
         </div>
+
+
 
         <div class="col-md-2">
 
 
-          <button type="button"  class="btn btn-primary btn-block btn-lg" ng-click="return()">Return</button>
+          <div class="panel panel-success">
+          <div class="panel-heading">
+            Drink
+          </div>
+          <div class="panel-body" >
+            <ul class="list-group">
+              <li class="list-group-item">Fraco: {{drink[0].pertinenceDegree}}</li>
+              <li class="list-group-item">Suave: {{drink[1].pertinenceDegree}}</li>
+              <li class="list-group-item">Forte: {{drink[2].pertinenceDegree}}</li>
+            </ul>
+          </div>
         </div>
+        <button type="button"  class="btn btn-primary btn-block btn-lg" ng-click="return()">Voltar</button>
+      </div>
       </div>
 
     </div>

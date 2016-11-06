@@ -1,7 +1,7 @@
 <div class="row" ng-show="!calculated">
   <div class="col-md-1">&nbsp;</div>
   <div class="col-md-10 text-center">
-    <h3>Make you drink now!</h3>
+    <h3>Escolha as quantidades!</h3>
     <br />
     <div class="col-md-1">&nbsp;</div>
     <div class="col-md-2">
@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="panel panel-info inputShadow">
-        <div class="panel-heading">Developed by</div>
+        <div class="panel-heading">Desenvolvido por</div>
         <div class="panel-body">
           <p class="text-left">
             <span ng-repeat="developer in developers">{{developer.name}}<span ng-if="!$last">,</span><span ng-if="$last"> - ADSMA6</span></span>
@@ -39,7 +39,7 @@
     </div>
     <div class="col-md-2">
       <div class="panel panel-info inputShadow">
-        <div class="panel-heading">Action Panel</div>
+        <div class="panel-heading">Paneil de Ações</div>
         <div class="panel-body">
           <p>
             <button type="button" class="btn btn-primary btn-block btn-lg" ng-click="clearQuantity()">Limpar</button>
@@ -48,7 +48,7 @@
             <button type="button" class="btn btn-success btn-block btn-lg" ng-click="ingrdientsDegree()">Cálcular</button>
           </p>
           <p>
-            <button type="button" class="btn btn-warning btn-block btn-lg" ng-click="helpMe()">Help me!</button>
+            <button type="button" class="btn btn-warning btn-block btn-lg" ng-click="helpMe()">Ajuda</button>
           </p>
         </div>
       </div>
