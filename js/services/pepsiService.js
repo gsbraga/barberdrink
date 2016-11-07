@@ -12,7 +12,7 @@
     vm.softDegree = function(pepsi) {
       var x = pepsi.quantity;
       var pertinenceDegree = 0;
-      if (x >= 62 && x <= 64) pertinenceDegree = (62 - x) / (64 - 62);
+      if (x >= 62 && x <= 64) pertinenceDegree = (x - 62) / (64 - 62);
       if (x > 64 && x < 66) pertinenceDegree = 1;
       if (x >= 66 && x <= 68) pertinenceDegree = (68 - x) / (68 - 66);
       pepsi.softPertinenceDegree = pertinenceDegree;

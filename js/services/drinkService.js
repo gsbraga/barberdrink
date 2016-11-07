@@ -20,7 +20,7 @@
       var x = 0;
       var sodaIndex = 0;
       var iceDegree = ingredients[3].pertinenceDegree;
-      if (ingredients[1].show) sodaDegree = 1;
+      if (ingredients[1].show) sodaIndex = 1;
       var degreeA = 0; var degreeB = 0; var degreeC = 0;
       degreeA = Math.min(iceDegree,(Math.min(ingredients[sodaIndex].strongPertinenceDegree,
                                             ingredients[2].weakPertinenceDegree)));
@@ -34,7 +34,7 @@
       var x = 0;
       var sodaIndex = 0;
       var iceDegree = ingredients[3].pertinenceDegree;
-      if (ingredients[1].show) sodaDegree = 1;
+      if (ingredients[1].show) sodaIndex = 1;
       var degreeA = 0; var degreeB = 0; var degreeC = 0;
       degreeA = Math.min(iceDegree,(Math.min(ingredients[sodaIndex].strongPertinenceDegree,
                                             ingredients[2].softPertinenceDegree)));
@@ -48,7 +48,7 @@
       var x = 0;
       var sodaIndex = 0;
       var iceDegree = ingredients[3].pertinenceDegree;
-      if (ingredients[1].show) sodaDegree = 1;
+      if (ingredients[1].show) sodaIndex = 1;
       var degreeA = 0; var degreeB = 0; var degreeC = 0;
       degreeA = Math.min(iceDegree,(Math.min(ingredients[sodaIndex].weakPertinenceDegree,
                                             ingredients[2].weakPertinenceDegree)));
