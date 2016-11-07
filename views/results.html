@@ -44,6 +44,9 @@
         <label><i class="fa fa-money fa-3x" ng-if="key === 3"></i></label>
           <h4 ng-if="key === 3">Valor: R$ {{drink[greaterIndex].price}}</h4>
           <h5 ng-if="key === 3">Paladar do Drink: {{drink[greaterIndex].pertinenceName}}</h5>
+          <span ng-if="key === 3 && equalValueAlert;" style="color: red;">
+            {{alertEqualValueMessage}} {{greaterPrice}}
+          </span>
         </div>
 
 

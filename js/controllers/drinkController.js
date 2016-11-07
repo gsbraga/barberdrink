@@ -1,8 +1,8 @@
 (function() {
   let app = angular.module("barberDrinks");
   app.controller("barberDrinksController", ["$scope", "drinkService", "$http","$location", function($scope, drinkService, $http, $location) {
-    $scope.calculated = false;
     $scope.coke = true;
+    $scope.greaterPrice = "Será considerado para cobrança o maior valor.";
     /* ### REFDATA ### */
     $http.get('/js/components/refData.json').success(function(data) {
       $scope.ingredients=data["ingredients"];
@@ -29,16 +29,29 @@
       return validated;
     }
     $scope.ingrdientsDegree = function() {
+      $scope.equalValueAlert = false;
       if ($scope.validateCubaLibre()) {
         $scope.calculated = true;
         drinkService.ingrdientsDegree($scope.ingredients);
         drinkService.drinkDegree($scope.ingredients, $scope.drink);
+        if ($scope.drink[0].pertinenceDegree === $scope.drink[1].pertinenceDegree && $scope.drink[1].pertinenceDegree !== 0) {
+          $scope.alertEqualValueMessage = "O grau de pertiência de Fraco e Suave são iguais.";
+          $scope.equalValueAlert = true;
+        }
+        if ($scope.drink[0].pertinenceDegree === $scope.drink[2].pertinenceDegree && $scope.drink[0].pertinenceDegree !== 0) {
+          $scope.alertEqualValueMessage = "O grau de pertiência de Fraco e Forte são iguais.";
+          $scope.equalValueAlert = true;
+        }
+        if ($scope.drink[2].pertinenceDegree === $scope.drink[1].pertinenceDegree && $scope.drink[1].pertinenceDegree !== 0){
+          $scope.alertEqualValueMessage = "O grau de pertiência de Suave e Forte são iguais.";
+          $scope.equalValueAlert = true;
+        }
         if ($scope.drink[0].pertinenceDegree > $scope.drink[1].pertinenceDegree) {
           $scope.greaterIndex = 0;
         } else {
           $scope.greaterIndex = 1;
         }
-        if ($scope.drink[2].pertinenceDegree > $scope.drink[$scope.greaterIndex].pertinenceDegree) $scope.greaterIndex = 2;
+        if ($scope.drink[2].pertinenceDegree >= $scope.drink[$scope.greaterIndex].pertinenceDegree) $scope.greaterIndex = 2;
       } else {
         $('#alertModal').modal('show');
       }
