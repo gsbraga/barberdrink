@@ -6,7 +6,7 @@
       return Math.max(a, (Math.max(b,c)));
     }
     vm.minBetweenDegrees = function(a, b, c){
-      return Math.min(a, (Math.min(b,c));
+      return Math.min(a, (Math.min(b,c)));
     }
     vm.ingrdientsDegree = function (ingredients) {
       cokeService.cokeDegree(ingredients[0]);
