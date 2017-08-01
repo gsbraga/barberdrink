@@ -3,7 +3,7 @@
 }
 .header {
   min-height: 100px;
-  background: url("/img/back-header.png") repeat-x;
+  background: url("../img/back-header.png") repeat-x;
 }
 .footer {
   text-align: center;
@@ -28,7 +28,7 @@
   box-shadow: 10px 10px 39px -5px rgba(0,0,0,0.34);
 }
 .backgroundImage {
-  background: url('/img/background.jpg') repeat-y;
+  background: url('../img/background.jpg') repeat-y;
   background-color: black;
 
 }
