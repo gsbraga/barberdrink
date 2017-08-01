@@ -4,7 +4,7 @@
     $scope.coke = true;
     $scope.greaterPrice = "Será considerado para cobrança o maior valor.";
     /* ### REFDATA ### */
-    $http.get('../components/refData.json').success(function(data) {
+    $http.get('../js/components/refData.json').success(function(data) {
       $scope.ingredients=data["ingredients"];
       $scope.developers=data["developers"];
       $scope.drink=data["drink"];
